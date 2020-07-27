@@ -15,4 +15,4 @@ RUN npm run build --prod
 FROM nginx:latest
 
 COPY --from=builder /app/dist/client /usr/share/nginx/html
-COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
+# COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
