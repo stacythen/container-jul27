@@ -10,7 +10,7 @@ ADD 1-northwind-data.sql /docker-entrypoint-initdb.d
 
 # add healthcheck
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD mysqladmin ping -u root -p ${MYSQL_ROOT_PASSWORD} || exit 1
+    CMD mysqladmin ping -uroot -p${MYSQL_ROOT_PASSWORD} || exit 1
 
 EXPOSE ${MYSQL_PORT}
 
